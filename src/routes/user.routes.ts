@@ -20,3 +20,9 @@ userRouter.put('/:id', validate(updateUserSchema), userController.updateUser.bin
 
 // Delete user
 userRouter.delete('/:id', userController.deleteUser.bind(userController));
+
+// Get user's followers
+userRouter.get('/:id/followers', userController.getFollowers.bind(userController));
+
+// Get user's activity
+userRouter.get('/:id/activity', userController.getActivity.bind(userController));
